@@ -12,8 +12,6 @@ function Provider({ children }) {
     setBooks(response.data);
   }, []);
 
-  
-
   const editBookById = async (id, newTitle) => {
     const response = await axios.put(`http://localhost:3001/books/${id}`, {
       title: newTitle,
